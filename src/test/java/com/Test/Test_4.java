@@ -1,5 +1,7 @@
 package com.Test;
 
+import org.testng.annotations.Test;
+
 import com.utility.BaseClass;
 
 public class Test_4 extends BaseClass{

@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Test.TC_001_verifyloginPage">
+      <class name="com.Test.BrokenLinks">
         <methods>
-          <include name="setup"/>
-          <include name="verifyFBloginTest_Invaliddata"/>
-          <include name="tearDown"/>
-          <include name="BS"/>
+          <include name="brokenlink"/>
         </methods>
-      </class> <!-- com.Test.TC_001_verifyloginPage -->
+      </class> <!-- com.Test.BrokenLinks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

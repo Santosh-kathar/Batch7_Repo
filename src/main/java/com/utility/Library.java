@@ -1,5 +1,9 @@
 package com.utility;
 
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -32,5 +36,19 @@ public class Library {
 			test.log(Status.FAIL, "Unable to click"+e);
 			
 		}
+	}
+	public static void verifybrokenlink(String url1) throws Exception {
+		URL url=new URL(url1);
+		HttpURLConnection httpurl=(HttpURLConnection) url.openConnection();
+		httpurl.setConnectTimeout(4000);
+		httpurl.connect();
+		
+		if(httpurl.getResponseCode()==200){
+			System.out.println("OK");
+		}else {
+			System.out.println("broken");
+		}
+		
+		
 	}
 }
